@@ -63,7 +63,7 @@ class Card:
             print("That's not a number found in a deck of cards!")
 
     
-my_card = Card("hearts", "A")
+# my_card = Card("hearts", "A")
 
 # Without the __repr__ method defined in the class above
 # print(my_card) would result in the output being an object 
