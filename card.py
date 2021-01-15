@@ -7,16 +7,7 @@ class Card:
         self._number = number
         self._value_high = None
         self._value_low = None
-
-        if number.isnumeric():
-            self._value_high = int(number)
-            self._value_low = int(number)
-        elif number.upper() in ["J", "Q", "K"]:
-            self._value_high = 10
-            self._value_low = 10
-        elif number.upper() == "A":
-            self._value_high = 11
-            self._value_low = 1
+        self.value(number)
 
     # The __repr__ method allows the user to define the
     # output when an instance of the class is printed
@@ -77,7 +68,7 @@ my_card = Card("hearts", "A")
 # Without the __repr__ method defined in the class above
 # print(my_card) would result in the output being an object 
 # reference such as: <__main__.Card object at 0xb67290f0>
-print(my_card)
+# print(my_card)
 
 # By defining the __repr__ method in the class above, now when
 # print(my_card) is called, instead of the ugly object reference
@@ -85,8 +76,8 @@ print(my_card)
 
 # Another way of viewing the suit and number values of the
 # card would be to call each through the attribute
-print(my_card.suit)
-print(my_card.number)
+# print(my_card.suit)
+# print(my_card.number)
 
 # Remember that my_card.suit can't access the suit attribute 
 # directly, but instead triggers the "getter" method of the 
@@ -116,7 +107,7 @@ print(my_card.number)
 # prevent you from setting my_card._suit to whatever you wanted to.
 # Though let's set it back to "hearts"
 
-my_card._suit = "hearts"
-print(my_card._suit)
+# my_card._suit = "hearts"
+# print(my_card._suit)
 
-print(my_card._value_low, my_card._value_high)
+# print(my_card._value_low, my_card._value_high)
